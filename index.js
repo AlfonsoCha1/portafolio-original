@@ -396,6 +396,26 @@
 
     expFill.style.height = fillHeight + 'px';
     expDot.style.top = fillHeight + 'px';
+
+    // Color del indicador según el cuadro más visible
+    const cards = expSection.querySelectorAll('.experience-item');
+    let bestCard = null;
+    let bestRatio = 0;
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      const ratio = Math.max(0, visible) / Math.max(1, rect.height);
+      if(ratio > bestRatio){
+        bestRatio = ratio;
+        bestCard = card;
+      }
+    });
+    if(bestCard){
+      const accent = bestCard.dataset.accent || '#38bdf8';
+      const accent2 = bestCard.dataset.accent2 || accent;
+      expIndicator.style.setProperty('--exp-accent', accent);
+      expIndicator.style.setProperty('--exp-accent-2', accent2);
+    }
   }
 
   updateExpIndicator();
