@@ -310,6 +310,8 @@
 
     const newSrc = `Video_de_Pokemon/${videoName}`;
     videoEl.querySelector('source').src = newSrc;
+    videoEl.muted = false;
+    videoEl.volume = 1;
     videoEl.load();
     videoEl.currentTime = 0;
 
