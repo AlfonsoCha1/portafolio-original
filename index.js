@@ -367,5 +367,40 @@
     if(el) bgIO.observe(el);
   });
 
+  // Experience scroll indicator progress
+  const expSection = document.getElementById('EXPERIENCE');
+  const expIndicator = expSection && expSection.querySelector('.exp-scroll');
+  const expTrack = expIndicator && expIndicator.querySelector('.exp-scroll-track');
+  const expFill = expIndicator && expIndicator.querySelector('.exp-scroll-fill');
+  const expDot = expIndicator && expIndicator.querySelector('.exp-scroll-dot');
+
+  function updateExpIndicator(){
+    if(!expSection || !expIndicator || !expTrack || !expFill || !expDot) return;
+    const heading = expSection.querySelector('h2');
+    const lastCard = expSection.querySelector('.experience-item:last-child');
+    if(!heading || !lastCard) return;
+
+    const sectionTop = expSection.offsetTop;
+    const startY = heading.offsetTop + heading.offsetHeight + 8;
+    const endY = lastCard.offsetTop + lastCard.offsetHeight - 6;
+    const height = Math.max(40, endY - startY);
+
+    expIndicator.style.top = startY + 'px';
+    expIndicator.style.height = height + 'px';
+
+    const startAbs = sectionTop + startY;
+    const endAbs = sectionTop + endY;
+    const scrollPos = window.scrollY + window.innerHeight * 0.35;
+    const ratio = Math.min(1, Math.max(0, (scrollPos - startAbs) / Math.max(1, endAbs - startAbs)));
+    const fillHeight = height * ratio;
+
+    expFill.style.height = fillHeight + 'px';
+    expDot.style.top = fillHeight + 'px';
+  }
+
+  updateExpIndicator();
+  window.addEventListener('scroll', updateExpIndicator, { passive: true });
+  window.addEventListener('resize', updateExpIndicator);
+
 })();
 
