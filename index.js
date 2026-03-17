@@ -285,13 +285,13 @@
 
   // Background switch (purple home/about, red from stack to contact)
   // Cambio de fondo (morado en home/about, rojo de stack a contact)
+
   const bgSections = [
-    { id: 'HOME', red: false, redAnim: false, video: 'Pikachu.mp4', showVideo: true },
-    { id: 'ABOUT Me', red: false, redAnim: false, video: 'Charizard.mp4', showVideo: true },
-    { id: 'Stack', red: true, redAnim: true, video: null, showVideo: false },
+    { id: 'HOME', red: false, redAnim: false, video: null, showVideo: false },
+    { id: 'ABOUT Me', red: false, redAnim: false, video: null, showVideo: false },
+    { id: 'Stack', red: false, redAnim: false, video: null, showVideo: false },
     { id: 'EXPERIENCE', red: true, redAnim: true, video: null, showVideo: false },
-    { id: 'Diplomas and Certificates', red: true, redAnim: true, video: 'Blastoise.mp4', showVideo: true },
-    { id: 'PROJECTS', red: true, redAnim: false, video: 'Venasaur.mp4', showVideo: true },
+    { id: 'PROJECTS', red: true, redAnim: false, video: null, showVideo: false },
     { id: 'CONTACT', red: true, redAnim: false, video: null, showVideo: false }
   ];
 
@@ -449,4 +449,3 @@
   window.addEventListener('resize', updateExpIndicator);
 
 })();
-
