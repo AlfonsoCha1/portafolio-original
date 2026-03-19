@@ -1,3 +1,160 @@
+(function(){
+  // Traducción básica ES/EN
+  const translations = {
+      'Computer systems engineer with experience in IT support, networks, and technical troubleshooting. Specialized in diagnosing connectivity problems, configuring equipment and peripherals, and providing end-user support. I work in a structured manner, identifying the root cause of problems and applying stable, documented solutions. I develop personal projects in Python and web technologies for automation and continuous improvement. I adapt well to both individual and team work, with a strong sense of responsibility and organization.': 'Ingeniero en sistemas computacionales con experiencia en soporte técnico, redes y resolución de problemas técnicos. Especializado en diagnosticar problemas de conectividad, configurar equipos y periféricos, y brindar soporte a usuarios finales. Trabajo de manera estructurada, identificando la causa raíz de los problemas y aplicando soluciones estables y documentadas. Desarrollo proyectos personales en Python y tecnologías web para automatización y mejora continua. Me adapto bien tanto al trabajo individual como en equipo, con un fuerte sentido de responsabilidad y organización.',
+      'Ingeniero en sistemas computacionales con experiencia en soporte técnico, redes y resolución de problemas técnicos. Especializado en diagnosticar problemas de conectividad, configurar equipos y periféricos, y brindar soporte a usuarios finales. Trabajo de manera estructurada, identificando la causa raíz de los problemas y aplicando soluciones estables y documentadas. Desarrollo proyectos personales en Python y tecnologías web para automatización y mejora continua. Me adapto bien tanto al trabajo individual como en equipo, con un fuerte sentido de responsabilidad y organización.': 'Computer systems engineer with experience in IT support, networks, and technical troubleshooting. Specialized in diagnosing connectivity problems, configuring equipment and peripherals, and providing end-user support. I work in a structured manner, identifying the root cause of problems and applying stable, documented solutions. I develop personal projects in Python and web technologies for automation and continuous improvement. I adapt well to both individual and team work, with a strong sense of responsibility and organization.',
+    en: {
+      'Home': 'Home',
+      'Inicio': 'Home',
+      'About Me': 'About Me',
+      'Sobre mí': 'About Me',
+      'My Stack': 'My Stack',
+      'Mi Stack': 'My Stack',
+      'Experience': 'Experience',
+      'Experiencia': 'Experience',
+      'Proyects': 'Projects',
+      'Proyectos': 'Projects',
+      'Contact': 'Contact',
+      'Contacto': 'Contact',
+      'Hello, I am the Engineer José Alfonso Chavarín Montoya': 'Hello, I am the Engineer José Alfonso Chavarín Montoya',
+      'Hola, soy el Ingeniero José Alfonso Chavarín Montoya': 'Hello, I am the Engineer José Alfonso Chavarín Montoya',
+      'Download CV': 'Download CV',
+      'Descargar CV': 'Download CV',
+      'EDUCATION': 'EDUCATION',
+      'Universidad Internacional (UNINTER)': 'Universidad Internacional (UNINTER)',
+      'Postgraduate in Technology Management (Online)': 'Postgraduate in Technology Management (Online)',
+      'February 2025 – December 2025': 'February 2025 – December 2025',
+      'B.Sc. in Computer Systems Engineering': 'B.Sc. in Computer Systems Engineering',
+      'January 2020 – December 2024': 'January 2020 – December 2024',
+      'Languages': 'Languages',
+      'Spanish (Native)': 'Spanish (Native)',
+      'English (Intermediate, B2)': 'English (Intermediate, B2)',
+      'Years of Experience': 'Years of Experience',
+      'Projects': 'Projects',
+      'Skills': 'Skills',
+      'Herramientas': 'Tools',
+      'Aprendiendo': 'Learning',
+      'Otros': 'Others',
+      'Teamwork': 'Teamwork',
+      'Problem Solving': 'Problem Solving',
+      'Responsibility': 'Responsibility',
+      'Continuous Learning': 'Continuous Learning',
+      'Creativity': 'Creativity',
+      'Adaptability': 'Adaptability',
+      'VS Code': 'VS Code',
+      'Git & Github': 'Git & Github',
+      'Arduino IDE': 'Arduino IDE',
+      'Figma': 'Figma',
+      'Windows/Linux': 'Windows/Linux',
+      'Adobe Photoshop': 'Adobe Photoshop',
+      'Adobe Illustrator': 'Adobe Illustrator',
+      'Microsoft Office': 'Microsoft Office',
+      'Canva': 'Canva',
+      'Firebase': 'Firebase',
+      'React': 'React',
+      'Next.js': 'Next.js',
+      'Tailwind CSS': 'Tailwind CSS',
+      'Docker': 'Docker',
+      'Azure': 'Azure',
+      'Inglés B2': 'English B2',
+      'Scrum Methodology': 'Scrum Methodology',
+      'Packet Tracer (Redes)': 'Packet Tracer (Networks)',
+      'Scrum': 'Scrum',
+      'Vercel': 'Vercel',
+      'Render': 'Render',
+      'Bienvenido a mi portafolio': 'Welcome to my portfolio',
+      'Summary of professional experience and relevant projects.': 'Summary of professional experience and relevant projects.',
+      // Agrega más traducciones aquí según sea necesario
+    },
+    es: {
+      'Home': 'Inicio',
+      'Inicio': 'Inicio',
+      'About Me': 'Sobre mí',
+      'Sobre mí': 'Sobre mí',
+      'My Stack': 'Mi Stack',
+      'Mi Stack': 'Mi Stack',
+      'Experience': 'Experiencia',
+      'Experiencia': 'Experiencia',
+      'Proyects': 'Proyectos',
+      'Projects': 'Proyectos',
+      'Contact': 'Contacto',
+      'Contacto': 'Contacto',
+      'Hello, I am the Engineer José Alfonso Chavarín Montoya': 'Hola, soy el Ingeniero José Alfonso Chavarín Montoya',
+      'Hola, soy el Ingeniero José Alfonso Chavarín Montoya': 'Hola, soy el Ingeniero José Alfonso Chavarín Montoya',
+      'Download CV': 'Descargar CV',
+      'Descargar CV': 'Descargar CV',
+      'EDUCATION': 'EDUCACIÓN',
+      'Universidad Internacional (UNINTER)': 'Universidad Internacional (UNINTER)',
+      'Postgraduate in Technology Management (Online)': 'Posgrado en Gestión Tecnológica (En línea)',
+      'February 2025 – December 2025': 'Febrero 2025 – Diciembre 2025',
+      'B.Sc. in Computer Systems Engineering': 'Ingeniería en Sistemas Computacionales',
+      'January 2020 – December 2024': 'Enero 2020 – Diciembre 2024',
+      'Languages': 'Idiomas',
+      'Spanish (Native)': 'Español (Nativo)',
+      'English (Intermediate, B2)': 'Inglés (Intermedio, B2)',
+      'Years of Experience': 'Años de experiencia',
+      'Projects': 'Proyectos',
+      'Skills': 'Habilidades',
+      'Herramientas': 'Herramientas',
+      'Aprendiendo': 'Aprendiendo',
+      'Otros': 'Otros',
+      'Teamwork': 'Trabajo en equipo',
+      'Problem Solving': 'Resolución de problemas',
+      'Responsibility': 'Responsabilidad',
+      'Continuous Learning': 'Aprendizaje continuo',
+      'Creativity': 'Creatividad',
+      'Adaptability': 'Adaptabilidad',
+      'VS Code': 'VS Code',
+      'Git & Github': 'Git & Github',
+      'Arduino IDE': 'Arduino IDE',
+      'Figma': 'Figma',
+      'Windows/Linux': 'Windows/Linux',
+      'Adobe Photoshop': 'Adobe Photoshop',
+      'Adobe Illustrator': 'Adobe Illustrator',
+      'Microsoft Office': 'Microsoft Office',
+      'Canva': 'Canva',
+      'Firebase': 'Firebase',
+      'React': 'React',
+      'Next.js': 'Next.js',
+      'Tailwind CSS': 'Tailwind CSS',
+      'Docker': 'Docker',
+      'Azure': 'Azure',
+      'Inglés B2': 'Inglés B2',
+      'Scrum Methodology': 'Metodología Scrum',
+      'Packet Tracer (Redes)': 'Packet Tracer (Redes)',
+      'Scrum': 'Scrum',
+      'Vercel': 'Vercel',
+      'Render': 'Render',
+      'Bienvenido a mi portafolio': 'Bienvenido a mi portafolio',
+      'Welcome to my portfolio': 'Bienvenido a mi portafolio',
+      'Summary of professional experience and relevant projects.': 'Resumen de experiencia profesional y proyectos relevantes.',
+      // Agrega más traducciones aquí según sea necesario
+    }
+  };
+  let currentLang = 'es';
+  function translatePage(lang) {
+    document.querySelectorAll('.nav-link, .lang-translate, .fp-role, .fp-name, .sidebar-link, .sidebar-role, .sidebar-name, .btn, h1, h2, h3, h4, h5, h6, .loader-cubes-title, .loader-welcome').forEach(el => {
+      const original = el.dataset.originalText || el.textContent.trim();
+      el.dataset.originalText = original;
+      if (translations[lang][original]) {
+        el.textContent = translations[lang][original];
+      }
+    });
+    // Cambia el texto del botón
+    const langBtn = document.getElementById('lang-toggle');
+    if(langBtn) langBtn.textContent = lang === 'es' ? 'ES | EN' : 'EN | ES';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const langBtn = document.getElementById('lang-toggle');
+    if(langBtn) {
+      langBtn.addEventListener('click', function() {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        translatePage(currentLang);
+      });
+    }
+  });
+})();
+// ...existing code...
 // Portfolio interactions: typing, button ripple, modal, tilt, scroll-follow and scrollspy
 // Interacciones del portafolio: tipeo, efecto ripple, modal, tilt, seguimiento de scroll y scrollspy
 (function(){
