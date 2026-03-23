@@ -154,7 +154,8 @@
     }
   });
 })();
-
+// ...existing code...
+// Portfolio interactions: typing, button ripple, modal, tilt, scroll-follow and scrollspy
 // Interacciones del portafolio: tipeo, efecto ripple, modal, tilt, seguimiento de scroll y scrollspy
 (function(){
   // Typed text disabled
